@@ -1,0 +1,16 @@
+{
+  "name": "winner-auth",
+  "version": "1.0.0",
+  "description": "Authentication script for Winner",
+  "main": "script.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "install-browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.42.1"
+  },
+  "type": "module"
+}
