@@ -7,7 +7,7 @@ const init = async () => {
 
   const { userId, sessionToken } = await login({ username, password }, brand);
 
-  await openChrome({ sessionToken, userId, username });
+  await openChrome({ sessionToken, userId, username, brand });
 };
 
 init();

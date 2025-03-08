@@ -5,13 +5,13 @@ import { fillForm } from "./fill-form.js";
 import { getSubmitButtonSelector } from "./get-submit-button-selector.js";
 
 export const login = async ({ username, password }, brand) => {
-  const { page, browser } = await setup(false, brand);
+  const { page, browser } = await setup(brand);
 
   await openLoginPopup(page);
 
   await fillForm(page, username, password, getSubmitButtonSelector(brand));
 
-  const responseData = await captureNetwork(page);
+  const responseData = await captureNetwork(page, brand);
 
   await browser.close();
 

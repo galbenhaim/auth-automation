@@ -1,19 +1,27 @@
 import { chromium } from "playwright";
 
-export const openChrome = async ({ sessionToken, userId, username }) => {
-  console.log({ token: sessionToken, userId });
+export const openChrome = async ({ sessionToken, userId, username, brand }) => {
+  console.log({ sessionToken, userId, username });
 
-  const browser = await chromium.launch({ headless: false });
-  const context = await browser.newContext({ viewport: null });
+  const browser = await chromium.launch({
+    headless: false,
+    args: ["--auto-open-devtools-for-tabs", "--start-maximized"],
+  });
+
+  const context = await browser.newContext({
+    viewport: null,
+    devtools: true,
+  });
+
   const page = await context.newPage();
 
-  await page.goto("http://localhost:3000");
+  await page.goto(`http://m.${brand}.localhost:3000`);
 
-  await page.evaluate(
+  await page.addInitScript(
     ({ sessionToken, userId, username }) => {
-      localStorage.setItem("token", sessionToken);
-      localStorage.setItem("userId", userId);
-      localStorage.setItem("username", username);
+      window.localStorage.setItem("token", sessionToken);
+      window.localStorage.setItem("userId", userId);
+      window.localStorage.setItem("username", username);
     },
     { sessionToken, userId, username }
   );
