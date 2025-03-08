@@ -4,6 +4,7 @@ Since the Caliente login process requires a second factor authentication, Develo
 
 This script automates the process of logging in and submitting the second factor.
 
+![alt text](./src/assets/screenshot.png)
 ## Features
 
 - Automated form filling

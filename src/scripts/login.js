@@ -1,4 +1,4 @@
-import { setup } from "../setup.js";
+import { setup } from "./setup.js";
 import { captureNetwork } from "./capture-network.js";
 import { openLoginPopup } from "./open-login-popup.js";
 import { fillForm } from "./fill-form.js";
