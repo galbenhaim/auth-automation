@@ -12,5 +12,6 @@
     "dotenv": "^16.4.7",
     "playwright": "^1.42.1"
   },
+  "author": "Gal Ben Haim <gal.benhaim@alfabet.gg>",
   "type": "module"
 }
