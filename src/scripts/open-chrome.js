@@ -15,7 +15,7 @@ export const openChrome = async ({ sessionToken, userId, username, brand }) => {
 
   const page = await context.newPage();
 
-  await page.goto(`http://m.${brand}.localhost:3000`);
+  await page.goto("http://localhost:3000");
 
   await page.addInitScript(
     ({ sessionToken, userId, username }) => {
