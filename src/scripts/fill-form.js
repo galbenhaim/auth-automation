@@ -11,5 +11,5 @@ export const fillForm = async (
   await passwordInput.fill(password);
 
   const submitButton = await page.locator(submitButtonSelector);
-  await submitButton.click();
+  submitButton.click();
 };
