@@ -1,4 +1,4 @@
-export const captureNetwork = async (page, brand) => {
+export const captureNetwork = async (page) => {
   const url = "https://alfabet-gateway.parleyit.in/authenticate";
 
   const response = await page.waitForResponse((response) =>
