@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 
-export const openChrome = async ({ sessionToken, userId, username, brand }) => {
+export const openChrome = async ({ sessionToken, userId, username }) => {
   console.log({ sessionToken, userId, username });
 
   const browser = await chromium.launch({
