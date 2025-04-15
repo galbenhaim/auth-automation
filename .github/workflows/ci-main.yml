@@ -31,11 +31,5 @@ jobs:
       - name: Update package.json version
         run: 'sed -i -e "s/\"version\": \"0.0.0\"/\"version\": \"1.0.${{github.run_id}}\"/g" package.json'
 
-      - name: Set registry-url
-        run: npm config set registry https://npm.pkg.github.com
-
-      - name: Set authToken
-        run: npm config set //npm.pkg.github.com/:_authToken ${{ secrets.OPS_BOT_PAT }}
-
       - name: Publish to GitHub Packages
         run: npm publish
