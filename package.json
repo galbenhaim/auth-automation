@@ -1,6 +1,6 @@
 {
   "name": "alfabet-auth",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Easily authenticate to Alfabet",
   "main": "src/index.js",
   "scripts": {
