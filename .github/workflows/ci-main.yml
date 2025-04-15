@@ -31,5 +31,8 @@ jobs:
       - name: Update package.json version
         run: 'sed -i -e "s/\"version\": \"0.0.0\"/\"version\": \"1.0.${{github.run_id}}\"/g" package.json'
 
+      - name: Echo OPS_BOT_PAT
+        run: echo $OPS_BOT_PAT
+
       - name: Publish to GitHub Packages
         run: npm publish
