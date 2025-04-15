@@ -1,8 +1,8 @@
 {
-  "name": "winner-auth",
+  "name": "alfabet-auth",
   "version": "1.0.0",
-  "description": "Authentication script for Winner",
-  "main": "script.js",
+  "description": "Easily authenticate to Alfabet",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
